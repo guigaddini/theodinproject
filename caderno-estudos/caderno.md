@@ -1,4 +1,4 @@
-Link caderno google: 
+Link caderno google docs: 
 
 https://docs.google.com/document/d/1DM4BZaxHqcmds2fj__spGfzonPYvh4n0u0WOZbN6Hn9Y/edit?usp=sharing
 
@@ -91,8 +91,6 @@ man
 
 
 
-
-
 Git
 
 
@@ -150,10 +148,6 @@ git status is read as git | status | (no destination).
 
 
 *preciso entender melhor essa parte de git/github pelo terminal. Sei fazer pelo GitHub Desktop porem.
-
-
-
-
 
 
 
@@ -248,6 +242,15 @@ Exemplo de boas praticas ao usar target=?__blank?:
 
 
 
+# Containers e Elementos de Texto
+
+
+
+
+
+
+
+
 
 
 GitHub
@@ -329,21 +332,118 @@ O "Conventional commits" e um exemplo de site com templates de commits que voce 
 
 
 
+CSS
+
+Cascading Style Sheet
+
+# Sintaxe basica do CSS
+
+
+
+
+O CSS e composto por regras, cada uma com um seletor (indica qual elemento HTML sera estilizado) e uma lista de declaracoes separadas por ponto e virgula.
 
 
 
 
 
+# Tipos de Seletores
+
+
+## Seletor Universal
+
+
+O seletor universal seleciona todos os elementos de uma pagina. Sua sintaxe e um asterisco *. Exemplo:css * {
+
+  color: purple;
+
+}
+
+
+
+## Seletores de Tipo (ou Elemento)
+
+
+O seletor de tipo seleciona todos os elementos de um tipo especifico. Exemplo:html <div>Hello, World!</div>
+
+<div>Again!</div>
+
+<p>Hi...</p> div {
+
+  color: white;
+
+}
+
+Nesse caso, todos os elementos <div> terao o texto branco, mas o <p> nao.
 
 
 
 
 
+## Seletores de Classe
+
+
+Seleciona todos os elementos com uma classe especifica. HTML: <div class="alert-text">Texto de alerta.</div>
+
+? .alert-text {
+
+  color: red;
+
+}
+
+A classe pode ser usada em varios elementos.
 
 
 
+## Seletores de ID
 
 
+Seleciona um elemento unico com um ID especifico. Exemplo:
+
+html: <div id="title">Titulo da Pagina</div>
+
+
+
+css:#title {
+
+  background-color: red;
+
+}
+
+O ID e unico, ou seja, nao pode ser repetido em uma pagina.
+
+
+
+## Seletores de Agrupamento
+
+
+Agrupar seletores que compartilham declaracoes comuns reduz a repeticao. Exemplo:css .read, .unread {
+
+  color: white;
+
+  background-color: black;
+
+}
+
+## Seletores Encadeados
+
+
+Permite combinar seletores de forma que um seletor tenha que atender a varias condicoes. Exemplo:css .subsection.header {
+
+  color: red;
+
+}
+
+## Combinador Descendente
+
+
+Seleciona um elemento se ele for descendente de outro. Exemplo:css .ancestor .child {
+
+  /* regras */
+
+}
+
+Aqui, .child sera selecionado apenas se estiver dentro de .ancestor.
 
 
 
