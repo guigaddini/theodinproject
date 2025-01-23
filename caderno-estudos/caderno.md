@@ -59,7 +59,7 @@ https://www.cursoemvideo.com/curso/linux/aulas/comandos-do-terminal-do-linux/
 
 
 
-rm -r diretorio
+EX: 				rm -r diretorio
 
 ### touch
 
@@ -364,11 +364,15 @@ O seletor universal seleciona todos os elementos de uma pagina. Sua sintaxe e um
 ## Seletores de Tipo (ou Elemento)
 
 
-O seletor de tipo seleciona todos os elementos de um tipo especifico. Exemplo:html <div>Hello, World!</div>
+O seletor de tipo seleciona todos os elementos de um tipo especifico. 
+
+HTML: <div>Hello, World!</div>
 
 <div>Again!</div>
 
-<p>Hi...</p> div {
+<p>Hi...</p>
+
+CSS:div {
 
   color: white;
 
@@ -383,9 +387,7 @@ Nesse caso, todos os elementos <div> terao o texto branco, mas o <p> nao.
 ## Seletores de Classe
 
 
-Seleciona todos os elementos com uma classe especifica. HTML: <div class="alert-text">Texto de alerta.</div>
-
-? .alert-text {
+Seleciona todos os elementos com uma classe especifica. HTML: <div class="alert-text">Texto de alerta.</div>CSS: .alert-text {
 
   color: red;
 
@@ -393,14 +395,12 @@ Seleciona todos os elementos com uma classe especifica. HTML: <div class="aler
 
 A classe pode ser usada em varios elementos.
 
-
-
 ## Seletores de ID
 
 
-Seleciona um elemento unico com um ID especifico. Exemplo:
+Seleciona um elemento unico com um ID especifico. Exemplo:
 
-html: <div id="title">Titulo da Pagina</div>
+HTML: <div id="title">Titulo da Pagina</div>
 
 
 
@@ -410,14 +410,18 @@ css:#title {
 
 }
 
-O ID e unico, ou seja, nao pode ser repetido em uma pagina.
+
+
+O ID e unico, ou seja, nao pode ser repetido em uma pagina, por isso, nao costuma ser muito utilizado!
 
 
 
 ## Seletores de Agrupamento
 
 
-Agrupar seletores que compartilham declaracoes comuns reduz a repeticao. Exemplo:css .read, .unread {
+Agrupar seletores que compartilham declaracoes comuns reduz a repeticao.
+
+css: .read, .unread {
 
   color: white;
 
@@ -428,7 +432,7 @@ O ID e unico, ou seja, nao pode ser repetido em uma pagina.
 ## Seletores Encadeados
 
 
-Permite combinar seletores de forma que um seletor tenha que atender a varias condicoes. Exemplo:css .subsection.header {
+Permite combinar seletores de forma que um seletor tenha que atender a varias condicoes. css: .subsection.header {
 
   color: red;
 
@@ -437,13 +441,266 @@ O ID e unico, ou seja, nao pode ser repetido em uma pagina.
 ## Combinador Descendente
 
 
-Seleciona um elemento se ele for descendente de outro. Exemplo:css .ancestor .child {
+Seleciona um elemento se ele for descendente de outro. 
+
+css: .ancestor .child {
 
   /* regras */
 
 }
 
 Aqui, .child sera selecionado apenas se estiver dentro de .ancestor.
+
+
+
+
+
+# Cheat sheet CSS
+
+
+Baseado em: https://www.youtube.com/watch?v=l1mER1bV0N0
+
+Descricao
+
+CSS
+
+Resultado
+
+Basico
+
+
+
+
+
+Seletor universal
+
+*
+
+Seleciona todos os elementos
+
+Seletor de tipo
+
+div
+
+Seleciona elementos do tipo especificado (ex.: <div>)
+
+Seletor de classe
+
+.classe
+
+Seleciona elementos com a classe especificada
+
+Seletor de ID
+
+#id
+
+Seleciona elementos com o ID especificado
+
+Combinacoes de seletores
+
+
+
+
+
+Descendente
+
+div a
+
+Seleciona elementos <a> que sao descendentes de um <div>
+
+Filho direto
+
+div > a
+
+Seleciona <a> que sao filhos diretos de <div>
+
+Irmao geral
+
+div ~ a
+
+Seleciona elementos <a> que sao irmaos de <div> e aparecem depois
+
+Irmao adjacente
+
+div + a
+
+Seleciona o primeiro elemento <a> que aparece imediatamente apos <div>
+
+Combinacao OR
+
+div, a
+
+Seleciona todos os elementos <div> e <a>
+
+Combinacao AND
+
+div.classe
+
+Seleciona elementos <div> que possuem a classe especificada
+
+Atributos
+
+
+
+
+
+Tem atributo
+
+[atributo]
+
+Seleciona elementos que possuem o atributo especificado
+
+Valor exato
+
+[atributo="valor"]
+
+Seleciona elementos cujo atributo tenha o valor exato especificado
+
+Comeca com
+
+[atributo^="valor"]
+
+Seleciona elementos cujo atributo comeca com o valor especificado
+
+Termina com
+
+[atributo$="valor"]
+
+Seleciona elementos cujo atributo termina com o valor especificado
+
+Contem
+
+[atributo*="valor"]
+
+Seleciona elementos cujo atributo contem o valor especificado em qualquer parte
+
+Pseudo-elementos
+
+
+
+
+
+Antes
+
+div::before
+
+Insere conteudo antes dos filhos do elemento selecionado
+
+Depois
+
+div::after
+
+Insere conteudo depois dos filhos do elemento selecionado
+
+Classes de estado (Pseudo-classes)
+
+
+
+
+
+Hover
+
+button:hover
+
+Seleciona botoes quando o mouse passa por cima
+
+Foco
+
+button:focus
+
+Seleciona botoes quando estao em foco (clicados ou tabulados)
+
+Obrigatorio
+
+input:required
+
+Seleciona campos <input> obrigatorios
+
+Marcado
+
+input:checked
+
+Seleciona checkboxes ou botoes de radio marcados
+
+Desabilitado
+
+input:disabled
+
+Seleciona campos <input> desabilitados
+
+Posicao e outros
+
+
+
+
+
+Primeiro filho
+
+a:first-child
+
+Seleciona o primeiro filho dentro de um container
+
+Ultimo filho
+
+a:last-child
+
+Seleciona o ultimo filho dentro de um container
+
+Enesimo filho
+
+a:nth-child(n)
+
+Seleciona o enesimo filho dentro de um container (baseado em formula)
+
+Enesimo filho a partir do final
+
+a:nth-last-child(n)
+
+Seleciona o enesimo filho contando a partir do final
+
+Unico filho
+
+a:only-child
+
+Seleciona elementos que sao os unicos filhos de um container
+
+Primeiro do tipo
+
+a:first-of-type
+
+Seleciona o primeiro elemento de um determinado tipo dentro de um container
+
+Ultimo do tipo
+
+a:last-of-type
+
+Seleciona o ultimo elemento de um determinado tipo dentro de um container
+
+Enesimo do tipo
+
+a:nth-of-type(n)
+
+Seleciona o enesimo elemento de um determinado tipo dentro de um container
+
+Enesimo do tipo a partir do final
+
+a:nth-last-of-type(n)
+
+Seleciona o enesimo elemento de um tipo contando a partir do final
+
+Unico do tipo
+
+a:only-of-type
+
+Seleciona elementos que sao os unicos de um determinado tipo dentro de um container
+
+Nao
+
+a:not(.classe)
+
+Seleciona todos os elementos <a> que nao possuem a classe especificada
+
+
 
 
 
