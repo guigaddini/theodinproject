@@ -455,6 +455,14 @@ Aqui, .child sera selecionado apenas se estiver dentro de .ancestor.
 
 
 
+## ATENCAO!
+
+
+### Ordem de leitura do CSS
+
+
+
+
 # Cheat sheet CSS
 
 
@@ -702,6 +710,159 @@ Seleciona todos os elementos <a> que nao possuem a classe especificada
 
 
 
+
+
+SASS
+
+### Baseado no video: 
+
+
+
+
+O Sass (Syntactically Awesome Stylesheets) e uma extensao do CSS que adiciona funcionalidades como variaveis, aninhamento, mixins, heranca e importacao de arquivos, tornando o codigo mais organizado, reutilizavel e facil de manter.
+
+### Principais vantagens do Sass
+
+
+? Facilita a organizacao do codigo CSS? Evita repeticao, reduzindo a quantidade de codigo? Permite variaveis, facilitando alteracoes globais? Suporta aninhamento, tornando o codigo mais intuitivo? Possui mixins e heranca, ajudando na reutilizacao de estilos
+
+### Como funciona?
+
+
+
+
+
+
+Exemplo de codigo Sass (.scss):$primary-color: blue;
+
+
+
+body {
+
+  background: $primary-color;
+
+  nav {
+
+    ul {
+
+      list-style: none;
+
+    }
+
+  }
+
+}
+
+
+
+Apos a compilacao, vira CSS puro:body {
+
+  background: blue;
+
+}
+
+body nav ul {
+
+  list-style: none; 
+
+}
+
+### 1. Variaveis ($nome-da-variavel)
+
+
+
+
+$primary-color: blue;
+
+body {
+
+  background: $primary-color;
+
+}
+
+###  2. Aninhamento (Nestings)
+
+
+
+
+nav {
+
+  ul {
+
+   list-style: none;
+
+    li {
+
+      display: inline-block;
+
+    }
+
+  }
+
+}
+
+### 3. @import (Divisao de arquivos)
+
+
+
+
+Exemplo:scssCopiarEditar@import "header";
+
+@import "footer";
+
+
+
+### 4. Mixins (@mixin e @include)
+
+
+
+
+@mixin flex-center($direction) {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  flex-direction: $direction;
+
+}
+
+
+
+.container {
+
+  @include flex-center(column);
+
+}
+
+
+
+### 5. @extend (Heranca de estilos)
+
+
+
+
+.btn {
+
+  padding: 10px;
+
+  border-radius: 5px;
+
+}
+
+
+
+.btn-primary {
+
+  @extend .btn;
+
+  background-color: blue;
+
+}
+
+###  
 
 
 
