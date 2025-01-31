@@ -719,6 +719,16 @@ SASS
 
 
 
+# Documentacao
+
+
+https://sass-lang.com/documentation/
+
+
+
+# Descricao
+
+
 O Sass (Syntactically Awesome Stylesheets) e uma extensao do CSS que adiciona funcionalidades como variaveis, aninhamento, mixins, heranca e importacao de arquivos, tornando o codigo mais organizado, reutilizavel e facil de manter.
 
 ### Principais vantagens do Sass
@@ -753,8 +763,6 @@ body {
 
 }
 
-
-
 Apos a compilacao, vira CSS puro:body {
 
   background: blue;
@@ -770,7 +778,7 @@ body nav ul {
 ### 1. Variaveis ($nome-da-variavel)
 
 
-
+Permitem armazenar valores reutilizaveis, como cores, tamanhos e fontes.
 
 $primary-color: blue;
 
@@ -783,7 +791,7 @@ body {
 ###  2. Aninhamento (Nestings)
 
 
-
+Permite escrever estilos dentro de seletores, tornando o codigo mais organizado.
 
 nav {
 
@@ -804,18 +812,18 @@ nav {
 ### 3. @import (Divisao de arquivos)
 
 
-
+Permite dividir o codigo em arquivos menores e importa-los no principal.
 
 Exemplo:scssCopiarEditar@import "header";
 
 @import "footer";
 
-
+Arquivos parciais comecam com __ (exemplo: __header.scss).
 
 ### 4. Mixins (@mixin e @include)
 
 
-
+Funcoes reutilizaveis que podem receber parametros.
 
 @mixin flex-center($direction) {
 
@@ -842,7 +850,7 @@ Exemplo:scssCopiarEditar@import "header";
 ### 5. @extend (Heranca de estilos)
 
 
-
+Permite reaproveitar estilos de um seletor em outro, semelhante a heranca em programacao.
 
 .btn {
 
